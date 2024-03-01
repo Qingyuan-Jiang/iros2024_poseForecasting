@@ -95,7 +95,8 @@
 
                     <!-- ArXiv Link -->
                     <span class="link-block">
-                    <a href="https://arxiv.org/abs/2012.06023.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://arxiv.org/abs/2012.06023.pdf" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
                         </span>
@@ -104,7 +105,8 @@
                     </span>
 
                     <span class="link-block">
-                    <a href="https://arxiv.org/abs/2103.11168.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://arxiv.org/abs/2103.11168.pdf" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
                         </span>
@@ -135,19 +137,72 @@
     <div class="container is-max-desktop">
         <div class="hero-body">
             <div class="container">
-                In the robot follow-ahead task, a mobile robot is tasked to maintain its relative position in front of a moving human actor while keeping the actor in sight.
-                To accomplish this task it is important that the robot understand the full 3D pose of the human (since the head orientation can be different than the torso) and predict the future human poses so as to plan accordingly.
+                In the robot follow-ahead task, a mobile robot is tasked to maintain its relative position in front of a
+                moving human actor while keeping the actor in sight.
+                To accomplish this task it is important that the robot understand the full 3D pose of the human (since
+                the head orientation can be different than the torso) and predict the future human poses so as to plan
+                accordingly.
                 The latter task is tricky in a complex environment with junctions and multiple corridors.
-                In this work, we address the problem of forecasting the full 3D trajectory of a human in such environments.
-                Our main insight is to show that one can first predict the 2D trajectory and then estimate the full 3D trajectory by conditioning the estimator on the predicted 2D trajectory.
-                With this approach, we achieve results comparable or better than the state-of-the-art three times faster.
-                As part of our contribution, we present a new dataset where, in contrast to existing datasets, the human motion is in a much larger area than a single room.
-                We also present a complete robot system that integrates our human pose forecasting network on the mobile robot to enable real-time robot follow-ahead and present results from real-world experiments in multiple buildings on campus.
+                In this work, we address the problem of forecasting the full 3D trajectory of a human in such
+                environments.
+                Our main insight is to show that one can first predict the 2D trajectory and then estimate the full 3D
+                trajectory by conditioning the estimator on the predicted 2D trajectory.
+                With this approach, we achieve results comparable or better than the state-of-the-art three times
+                faster.
+                As part of our contribution, we present a new dataset where, in contrast to existing datasets, the human
+                motion is in a much larger area than a single room.
+                We also present a complete robot system that integrates our human pose forecasting network on the mobile
+                robot to enable real-time robot follow-ahead and present results from real-world experiments in multiple
+                buildings on campus.
                 <br>
                 <br>
             </div>
             <div class="container" style="text-align:center;">
                 <img src="static/images/teaser.png" alt="Main Idea" style="text-align:center;width:659px;"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <!--            <div class="container">-->
+            <!--                System Overview. The dataset contains (1) randomly-->
+            <!--                generated workspaces, and (2) for each workspace, the cost-->
+            <!--                to go between pairs of sampled configurations. Training-->
+            <!--                architecture: C2g generating HOF network encodes an input-->
+            <!--                workspace and outputs the cost-to-go function represented-->
+            <!--                as a radial basis function network. Execution: During run-->
+            <!--                time, following the gradient of the cost-to-go function yields-->
+            <!--                continuous collision-free trajectories.-->
+            <!--                <br>-->
+            <!--                <br>-->
+            <!--            </div>-->
+
+            <h2 class="title has-text-centered">Demonstration for real robot</h2>
+
+            <div style="text-align: center;">
+                <video poster="" id="demo1" autoplay controls muted loop playsinline width="75%" height="75%">
+                    <source src="./static/videos/demo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- End image carousel -->
+        </div>
+    </div>
+</section>
+<!-- End teaser video -->
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <div style="text-align: center;">
+                <h2 class="title has-text-centered">Planning results</h2>
+                <img src="./static/videos/anim2.gif" alt="Path Planning " width="70%">
+            </div>
+            <div style="text-align: center;">
+                Planning based human motion prediction. Greedy v.s. Dynamic programming.
             </div>
         </div>
     </div>
@@ -160,7 +215,7 @@
 <!--        <a href="#about"><a href="https://rsn.umn.edu/">About</a>-->
 <!--</div>-->
 
-<div class="container">
+<!--<div class="container">-->
 <!--    <h1>Map-Aware Human Pose Prediction for Robot Follow-Ahead</h1>-->
 <!--    <p><strong>Authors:</strong> Qingyuan Jiang, Burak Susam, Jun-Jee Chao, and Volkan Isler</p>-->
 <!--    <p><strong>University of Minnesota RSN Laboratory</strong></p>-->
@@ -183,96 +238,96 @@
 <!--        <figcaption>Figure 1: Map-aware Human Pose Prediction</figcaption>-->
 <!--    </figure>-->
 
-    <h2>Approach</h2>
-    <p>Given human history poses and surrounding environment,
-        our method predicts the future poses by following a twostep pipeline: first predict a human
-        trajectory, then complete the full-body pose based on the
-        predicted trajectory. The following subsections introduce our
-        representation of the environment and human poses. Then,
-        we describe each component in our network architecture in
-        detail.</p>
-    <figure>
-        <img src='static/images/supplemantary/modules.png' class="responsive-image">
-        <figcaption>Figure 2: System Modules</figcaption>
-    </figure>
-    <figure>
-        <img src='static/images/network.png' class="responsive-image">
-        <figcaption>Figure 3: Network Architecture</figcaption>
-    </figure>
+<!--    <h2>Approach</h2>-->
+<!--    <p>Given human history poses and surrounding environment,-->
+<!--        our method predicts the future poses by following a twostep pipeline: first predict a human-->
+<!--        trajectory, then complete the full-body pose based on the-->
+<!--        predicted trajectory. The following subsections introduce our-->
+<!--        representation of the environment and human poses. Then,-->
+<!--        we describe each component in our network architecture in-->
+<!--        detail.</p>-->
+<!--    <figure>-->
+<!--        <img src='static/images/supplemantary/modules.png' class="responsive-image">-->
+<!--        <figcaption>Figure 2: System Modules</figcaption>-->
+<!--    </figure>-->
+<!--    <figure>-->
+<!--        <img src='static/images/network.png' class="responsive-image">-->
+<!--        <figcaption>Figure 3: Network Architecture</figcaption>-->
+<!--    </figure>-->
 
-    <h2>Dataset</h2>
-    <p>In addition to the standard synthetic dataset: GTA-IM,
-        we are also interested in evaluating our method on a largescale real-world dataset. However, existing realistic
-        datasets,
-        such as PROX [9], are limited to single-room areas. Therefore, we collect and propose the Real Indoor Motion
-        (RealIM) dataset for the large-scale human follow-ahead. We
-        simultaneously capture the entire human body and environment in building-scale spaces using the robot shown in
-        Figure 4. Compared to the existing synthetic dataset (GTAIM), the proposed dataset contains more movement
-        patterns,
-        including walking, crab moving, and varying moving speeds.
-        We collect 12 sequences from 5 different building halls.
-        Each contains an approximately four-minute movement. The
-        dataset includes sequences with different lighting conditions
-        recorded at different daytime. We invite multiple actors with
-        different walking styles and genders. We provide the raw
-        ROS bags and pre-processed data for direct use. In Fig. ??,
-        we present a few sample images from our dataset visualized
-        in Rviz</p>
-    <figure>
-        <img src='static/images/hardware.png' class="responsive-image">
-        <figcaption>Figure 4: Hardware Setup</figcaption>
-    </figure>
-    <figure>
-        <img src='static/images/dataset.png' class="responsive-image">
-        <figcaption>Figure 5: The Dataset and Collection Stages</figcaption>
-    </figure>
+<!--    <h2>Dataset</h2>-->
+<!--    <p>In addition to the standard synthetic dataset: GTA-IM,-->
+<!--        we are also interested in evaluating our method on a largescale real-world dataset. However, existing realistic-->
+<!--        datasets,-->
+<!--        such as PROX [9], are limited to single-room areas. Therefore, we collect and propose the Real Indoor Motion-->
+<!--        (RealIM) dataset for the large-scale human follow-ahead. We-->
+<!--        simultaneously capture the entire human body and environment in building-scale spaces using the robot shown in-->
+<!--        Figure 4. Compared to the existing synthetic dataset (GTAIM), the proposed dataset contains more movement-->
+<!--        patterns,-->
+<!--        including walking, crab moving, and varying moving speeds.-->
+<!--        We collect 12 sequences from 5 different building halls.-->
+<!--        Each contains an approximately four-minute movement. The-->
+<!--        dataset includes sequences with different lighting conditions-->
+<!--        recorded at different daytime. We invite multiple actors with-->
+<!--        different walking styles and genders. We provide the raw-->
+<!--        ROS bags and pre-processed data for direct use. In Fig. ??,-->
+<!--        we present a few sample images from our dataset visualized-->
+<!--        in Rviz</p>-->
+<!--    <figure>-->
+<!--        <img src='static/images/hardware.png' class="responsive-image">-->
+<!--        <figcaption>Figure 4: Hardware Setup</figcaption>-->
+<!--    </figure>-->
+<!--    <figure>-->
+<!--        <img src='static/images/dataset.png' class="responsive-image">-->
+<!--        <figcaption>Figure 5: The Dataset and Collection Stages</figcaption>-->
+<!--    </figure>-->
 
 
-    <h2>Results</h2>
+<!--    <h2>Results</h2>-->
 
-    <figure>
-        <img src='static/images/qualitative.png' class="responsive-image">
-        <figcaption>Figure 6: Qualitative results - Placeholder</figcaption>
-    </figure>
+<!--    <figure>-->
+<!--        <img src='static/images/qualitative.png' class="responsive-image">-->
+<!--        <figcaption>Figure 6: Qualitative results - Placeholder</figcaption>-->
+<!--    </figure>-->
 
-    <section>
-        <h2>Setup</h2>
-        <p>After cloning the <a href="https://github.com/Qingyuan-Jiang/iros2024_poseForecasting">repo</a>, download the
-            data and place it in the data/ folder.</p>
-    </section>
+<!--    <section>-->
+<!--        <h2>Setup</h2>-->
+<!--        <p>After cloning the <a href="https://github.com/Qingyuan-Jiang/iros2024_poseForecasting">repo</a>, download the-->
+<!--            data and place it in the data/ folder.</p>-->
+<!--    </section>-->
 
-    <section>
-        <h2>Preprocess</h2>
-        <p>Execute <code>python process_real_dataset.py</code> to preprocess the data. This creates a <code>pf_preprocessed</code>
-            folder inside the data folder.</p>
-        <pre>
-        humanPosePrediction
-        ├── data
-        │   ├── Real-IM-Dataset
-        │   │   ├── sqeuence-1
-        │   │   │   ├── img1.jpg
-        │   ├── pf_preprocessed
-        │   │   ├── sequence-1.npz
-        ├── datasets
-        ├── results
-        </pre>
-    </section>
+<!--    <section>-->
+<!--        <h2>Preprocess</h2>-->
+<!--        <p>Execute <code>python process_real_dataset.py</code> to preprocess the data. This creates a <code>pf_preprocessed</code>-->
+<!--            folder inside the data folder.</p>-->
+<!--        <pre>-->
+<!--        humanPosePrediction-->
+<!--        ├── data-->
+<!--        │   ├── Real-IM-Dataset-->
+<!--        │   │   ├── sqeuence-1-->
+<!--        │   │   │   ├── img1.jpg-->
+<!--        │   ├── pf_preprocessed-->
+<!--        │   │   ├── sequence-1.npz-->
+<!--        ├── datasets-->
+<!--        ├── results-->
+<!--        </pre>-->
+<!--    </section>-->
 
-    <section>
-        <h2>Training</h2>
-        <p>Initiate training by running <code>python train.py</code>. To train with more networks, add scripts in the
-            models folder and update the <code>models/motion_pred.py</code> file accordingly.</p>
-    </section>
+<!--    <section>-->
+<!--        <h2>Training</h2>-->
+<!--        <p>Initiate training by running <code>python train.py</code>. To train with more networks, add scripts in the-->
+<!--            models folder and update the <code>models/motion_pred.py</code> file accordingly.</p>-->
+<!--    </section>-->
 
-    <section>
-        <h2>Evaluation</h2>
-        <p>For evaluation, run <code>python eval.py</code> to visualize the results.</p>
-    </section>
+<!--    <section>-->
+<!--        <h2>Evaluation</h2>-->
+<!--        <p>For evaluation, run <code>python eval.py</code> to visualize the results.</p>-->
+<!--    </section>-->
 
-    <h2>References</h2>
-    <ul>
-        <li>A list of references used throughout the paper.</li>
-    </ul>
-</div>
+<!--    <h2>References</h2>-->
+<!--    <ul>-->
+<!--        <li>A list of references used throughout the paper.</li>-->
+<!--    </ul>-->
+<!--</div>-->
 </body>
 </html>
