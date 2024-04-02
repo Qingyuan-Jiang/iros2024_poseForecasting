@@ -267,10 +267,10 @@ if __name__ == '__main__':
     parser.add_argument('--test_pose', action='store_true', default=False)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--epoch', type=int, default=3600)
-    parser.add_argument('--batch_size', type=int, default=1024)
+    parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--vis_traj_map', action='store_true', default=False)
     parser.add_argument('--vis_skeleton', action='store_true', default=False)
-    parser.add_argument('--exp', default='1114', type=str, help='experiment name')
+    parser.add_argument('--exp', default='exp', type=str, help='experiment name')
     parser.add_argument('--map', default='def', type=str, help='map visibility')
     args = parser.parse_args()
 
