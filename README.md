@@ -1,13 +1,13 @@
 # iros2024_poseForecasting
 Map-Aware Human Pose Prediction for Robot Follow-Ahead
 
-To run the minimum code, go into minimum_code directory:
+To run the minimum code, clone the repository and go into the repository directory:
 
 ```
-cd minimum_code
+cd iros2024_poseForecasting
 ```
 
-Install the requirements by:
+Install the requirements by running:
 
 ```
 pip install -r requirements.txt
